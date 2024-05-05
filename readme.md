@@ -3,6 +3,10 @@
 - Eric Bracamonte
 - Grover Ugarte
 
+# Enlace del video demostración
+
+https://youtu.be/6PpFhZ0iNYk
+
 # Actividad 1
 
 ## Actividad 1.1
