@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  boston-db-compose:
+    build: ./actividad-1
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=boston
+    volumes:
+      - boston-data:/var/lib/postgresql/data
+    networks:
+      - boston
+  boston-app-compose:
+    image: prober76/app:v1.0
+    ports:
+      - 5000:5000
+    environment:
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=boston
+      - DB_HOST=boston-db-compose
+      - DB_PORT=5432
+    networks:
+      - boston
+networks:
+  boston:
+volumes:
+  boston-data:
