@@ -16,6 +16,11 @@ Crear un volumen con el nombre boston-data
 docker volume create boston-data 
 ```
 
+Crear una red para conexiones de contenedores
+```sh
+docker network create boston
+```
+
 ## Actividad 1.2
 
 Comando para desplegar un contenedor de la base de datos
